@@ -1,18 +1,19 @@
-<script src="https://api.blackcatpagamentos.com/v1/js"></script>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Carteira</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://api.blackcatpagamentos.com/v1/js"></script>
+</head>
+<body>
 
 <div class="box">
-  <h2>💳 Depósito Cartão</h2>
-  <h3>📤 Saque PIX</h3>
+  <h2>💳 Carteira</h2>
 
-<input id="valor_saque" placeholder="Valor do saque">
-<input id="tipo_pix" placeholder="Tipo da chave (cpf/email/telefone)">
-<input id="chave_pix" placeholder="Chave PIX">
+  <p>Saldo: R$ <span id="saldo">0.00</span></p>
 
-<button onclick="solicitarSaque()">Solicitar Saque</button>
-
-<div id="msg"></div>
-  
-  <input id="valor" placeholder="Valor">
+  <input id="valor" placeholder="Valor do depósito">
 
   <input id="numero" placeholder="Número do cartão">
   <input id="nome" placeholder="Nome no cartão">
@@ -20,8 +21,10 @@
   <input id="ano" placeholder="AAAA">
   <input id="cvv" placeholder="CVV">
 
-  <button onclick="depositar()">Pagar</button>
+  <button onclick="depositarCartao()">Depositar</button>
   <button onclick="logout()">Sair</button>
 </div>
 
 <script src="wallet.js"></script>
+</body>
+</html>
