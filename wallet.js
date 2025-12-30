@@ -4,6 +4,25 @@ BlackCatPay.setPublicKey("SUA_PUBLIC_KEY");
 
 async function depositar(){
   const token = localStorage.getItem("token");
+  async function solicitarSaque(){
+  const token = localStorage.getItem("token");
+
+  const r = await fetch(API+"/saque_pix.php", {
+    method: "POST",
+    headers: {
+      "Content-Type":"application/json",
+      "Authorization":"Bearer "+token
+    },
+    body: JSON.stringify({
+      valor: valor_saque.value,
+      tipo: tipo_pix.value,
+      chave: chave_pix.value
+    })
+  });
+
+  const d = await r.json();
+  msg.innerText = d.message;
+}
 
   const card = {
     number: numero.value,
