@@ -1,14 +1,15 @@
 alert("auth.js carregou");
+
 const API = "https://viraeraul.ct.ws/api";
 
 function login() {
+  const email = document.getElementById("email").value;
+  const senha = document.getElementById("senha").value;
+
   fetch(`${API}/login.php`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      email: email.value,
-      senha: senha.value
-    })
+    body: JSON.stringify({ email, senha })
   })
   .then(r => r.json())
   .then(d => {
@@ -23,13 +24,13 @@ function login() {
 }
 
 function register() {
+  const email = document.getElementById("email").value;
+  const senha = document.getElementById("senha").value;
+
   fetch(`${API}/register.php`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      email: email.value,
-      senha: senha.value
-    })
+    body: JSON.stringify({ email, senha })
   })
   .then(r => r.json())
   .then(d => {
