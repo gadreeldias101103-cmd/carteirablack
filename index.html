@@ -2,48 +2,24 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Carteira Black</title>
-
-  <!-- Evita tela branca -->
-  <style>
-    body {
-      margin: 0;
-      background: #0b0f1a;
-      color: #fff;
-      font-family: Arial, sans-serif;
-    }
-  </style>
-
+  <title>Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- LOADING INICIAL -->
-<div id="loading">
-  <div class="loader"></div>
-  <p>Carregando...</p>
-</div>
+<div class="card">
+  <h2>🔐 Login</h2>
 
-<!-- LOGIN -->
-<div class="box" id="loginBox" style="display:none">
-  <h2>Login</h2>
-
-  <input id="email" placeholder="Email">
+  <input id="email" type="email" placeholder="Email">
   <input id="senha" type="password" placeholder="Senha">
 
   <button onclick="login()">Entrar</button>
-  <a href="register.html">Criar conta</a>
+
+  <div class="link">
+    <a href="register.html">Criar conta</a>
+  </div>
 </div>
 
 <script src="auth.js"></script>
-
-<script>
-  // simula carregamento + remove tela branca
-  setTimeout(() => {
-    document.getElementById("loading").style.display = "none";
-    document.getElementById("loginBox").style.display = "block";
-  }, 500);
-</script>
-
 </body>
 </html>
