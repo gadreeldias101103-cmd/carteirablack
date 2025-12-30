@@ -2,7 +2,16 @@
 
 <div class="box">
   <h2>💳 Depósito Cartão</h2>
+  <h3>📤 Saque PIX</h3>
 
+<input id="valor_saque" placeholder="Valor do saque">
+<input id="tipo_pix" placeholder="Tipo da chave (cpf/email/telefone)">
+<input id="chave_pix" placeholder="Chave PIX">
+
+<button onclick="solicitarSaque()">Solicitar Saque</button>
+
+<div id="msg"></div>
+  
   <input id="valor" placeholder="Valor">
 
   <input id="numero" placeholder="Número do cartão">
