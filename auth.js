@@ -1,3 +1,4 @@
+alert("auth.js carregou");
 const API = "https://viraeraul.ct.ws/api";
 
 function login() {
