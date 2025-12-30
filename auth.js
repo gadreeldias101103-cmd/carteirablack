@@ -1,4 +1,4 @@
-const API = "https://SEU_BACKEND.ct.ws/api";
+const API = "https://viraeraul.ct.ws/api";
 
 function login() {
   fetch(`${API}/login.php`, {
